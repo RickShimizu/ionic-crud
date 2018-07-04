@@ -1,0 +1,41 @@
+<ion-view title="Agenda" id="page2" style="background-color:#C0E7F8;">
+  <ion-content padding="true" class="has-header" ng-controller="agendaCtrl">
+    <form id="agenda-form5" class="list">
+      <label class="item item-input" id="agenda-input2">
+        <input type="text" placeholder="Pesquise">
+      </label>
+    </form>
+    <div class="spacer" style="width: 600px; height: 16px;"></div>
+    
+    <!-- Barra favoritos -->
+    <form id="agenda-form6" class="list">
+      <!--definição da função do botão  True / False-->
+      <ion-toggle toggle-class="toggle-positive" ng-checked="true" id="agenda-toggle3">Favoritos</ion-toggle>
+      <!-- Espaçamento da box -->
+      </form>
+      <!-- contatos começa aqui ! -->
+      <ion-list>
+        <ion-item class="item-icon-left item-icon-right positive" ng-repeat="contato in contatos">
+          <i class="icon ion-ios-personadd"></i>{{contato.nome}}
+          <i class="icon ion-android-favorite"></i>{{contato.telefone}}
+        </ion-item>
+      </ion-list>
+
+
+
+      <button class="button button-block button-calm"> Novo </button>
+
+      <script id="contato.html" type="text/ng-template">
+        <ion-modal-view>
+          <ion-header-bar>
+            <h1 class="title">Novo Contatos</h1>
+          </ion-header-bar>
+          <ion-content>
+            Hello!
+          </ion-content>
+        </ion-modal-view>
+      </script>
+
+    
+  </ion-content>
+</ion-view>
